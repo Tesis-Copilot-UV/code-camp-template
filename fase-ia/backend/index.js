@@ -1,0 +1,35 @@
+const express = require('express');
+const mysql = require('mysql2');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Conexión a la base de datos MySQL
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'komalli-user',
+    password: 'KomalliUV-password2026',
+    database: 'komalli_db' 
+});
+
+db.connect(err => {
+    if (err) {
+        console.error('Error conectando a la BD:', err);
+        return;
+    }
+    console.log('Base de datos conectada para Fase IA');
+});
+
+// Endpoint de prueba para verificar que el servidor funciona
+app.get('/', (req, res) => {
+    res.send('Servidor de la Fase IA corriendo correctamente');
+});
+
+//Definir endpoints según sea necesario
+
+const PORT = 3001;
+app.listen(PORT, () => {
+    console.log(`Servidor Backend IA en puerto ${PORT}`);
+});
