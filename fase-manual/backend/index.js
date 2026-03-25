@@ -19,17 +19,17 @@ db.connect(err => {
         console.error('Error conectando a la BD:', err);
         return;
     }
-    console.log('Base de datos conectada para Fase IA');
+    console.log('Base de datos conectada para Fase Manual');
 });
 
 // Endpoint de prueba para verificar que el servidor funciona
 app.get('/', (req, res) => {
-    res.send('Servidor de la Fase IA corriendo correctamente');
+    res.send('Servidor de la Fase Manual corriendo correctamente');
 });
 
 //Definir endpoints según sea necesario
 
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor Backend IA en puerto ${PORT}`);
+    console.log(`Servidor Backend Manual en puerto ${PORT}`);
 });
