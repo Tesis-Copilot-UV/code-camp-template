@@ -6,8 +6,8 @@
   "scripts": {
     "install-manual": "cd fase-manual/backend && npm install && cd ../frontend && npm install",
     "install-ia": "cd fase-ia/backend && npm install && cd ../frontend && npm install",
-    "dev-manual": "concurrently \"cd fase-manual/backend && npm start\" \"cd fase-manual/frontend && set PORT=4000 && npm start\"",
-    "dev-ia": "concurrently \"cd fase-ia/backend && npm start\" \"cd fase-ia/frontend && set PORT=4001 && npm start\""
+    "dev-manual": "concurrently \"cd fase-manual/backend && npm start\" \"cd fase-manual/frontend && npm start\"",
+    "dev-ia": "concurrently \"cd fase-ia/backend && npm start\" \"cd fase-ia/frontend && npm start\""
   },
   "repository": {
     "type": "git",
